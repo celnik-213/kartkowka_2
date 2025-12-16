@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Kartkowka2.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            WidthRequest="650">
+            <Label
+                Text="Spacer po Plantach!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="28"/>
+            <Image
+                Source="planty.png"
+                HeightRequest="500"
+                Aspect="AspectFit"
+                SemanticProperties.Description="planty zdjecie" />
+            <Label
+                x:Name="CounterPolubienia"
+                Text="Polubienia: 0"
+                HorizontalOptions="End"/>
+
+            <Label
+                Text="Siema siema siema siema siema siema Planty Siema siema siema siema siema siema Planty  Siema siema siema siema siema siema Planty Siema siema siema siema siema siema Planty Siema siema siema siema siema siema Planty Siema siema siema siema siema siema"
+                FontSize="18"/>
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15">
+                
+            <Button
+                Text="Lubię to" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                BackgroundColor="Green"
+                HorizontalOptions="Fill"
+                WidthRequest="150"
+                />
+                
+            <Button
+                Text="Nie lubię" 
+                 SemanticProperties.Hint="Counts the number of times you click"
+                 Clicked="OnCounterClickedDislike"
+                BackgroundColor="Red"
+                 HorizontalOptions="Fill" 
+                WidthRequest="150"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
